@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DaviesApiaries">
+  <DataContextMoniker Name="/DaviesApiariesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ae39ec47-2306-433e-bd95-3bd0c9c05aae" absoluteBounds="7.125, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/Activity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e0696ae-c77d-4589-8ae1-0daffebe719d" absoluteBounds="7.14, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fa14683-5a38-4fb4-8656-2ab85586097d" absoluteBounds="0.5, 0.875, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/ActivityType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49e59251-17e2-4017-bc84-e82403cbedd6" absoluteBounds="0.51499999999999968, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 0.875917455779247); (2.875 : 0.500917455779247); (2.875 : 0.125); (6.75 : 0.125); (7.125 : 0.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DaviesApiariesDataContext/ActivityType/ActivityType_Activity" />
+      <nodes>
+        <classShapeMoniker Id="8fa14683-5a38-4fb4-8656-2ab85586097d" />
+        <classShapeMoniker Id="ae39ec47-2306-433e-bd95-3bd0c9c05aae" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="99886a83-7678-4f51-b1eb-1f8e2b0c5306" absoluteBounds="4.125, 2.125, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/ApiarySiteActivity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a17786c1-ca89-4efc-b165-88d6559d8cbd" absoluteBounds="4.14, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.125 : 0.6875025); (5.71875 : 0.6875025); (5.71875 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DaviesApiariesDataContext/Activity/Activity_ApiarySiteActivity" />
+      <nodes>
+        <classShapeMoniker Id="ae39ec47-2306-433e-bd95-3bd0c9c05aae" />
+        <classShapeMoniker Id="99886a83-7678-4f51-b1eb-1f8e2b0c5306" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4920807d-b9b4-460d-b1fd-2fc3d3bac98a" absoluteBounds="3.25, 0.875, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/Area" />
+      <nestedChildShapes>
+        <elementListCompartment Id="198c0d40-6a33-45af-bd79-73addbcdbadd" absoluteBounds="3.265, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2761a4ab-433b-4f2c-93ab-bef68da3fafd" absoluteBounds="3.625, 4.625, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/PrimaryResource" />
+      <nestedChildShapes>
+        <elementListCompartment Id="608a7b46-d2ba-4caa-9a7b-bf894de905d3" absoluteBounds="3.6399999999999997, 5.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4c0659b-ca06-42e5-9009-5dde61138411" absoluteBounds="0.5, 3.25, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c5165bc-a8db-4587-9285-2dfe19e39cf3" absoluteBounds="0.51500000000000012, 3.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="304fa6a6-4a8f-44af-8eb0-316af8d3adaa" absoluteBounds="6.875, 3.5, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/DaviesApiariesDataContext/ApiarySite" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcf303d2-a015-4da8-a948-86e16937699a" absoluteBounds="6.89, 3.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.875 : 6.66902913411458); (5.90625 : 6.66902913411458); (5.90625 : 3.22115315755208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DaviesApiariesDataContext/ApiarySite/ApiarySite_ApiarySiteActivity" />
+      <nodes>
+        <classShapeMoniker Id="304fa6a6-4a8f-44af-8eb0-316af8d3adaa" />
+        <classShapeMoniker Id="99886a83-7678-4f51-b1eb-1f8e2b0c5306" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.40625 : 1.97115315755208); (3.40625 : 6.19508864583333); (5.82291666666667 : 6.19508864583333 : JumpStart); (5.98958333333333 : 6.19508864583333 : JumpEnd); (6.875 : 6.19508864583333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DaviesApiariesDataContext/Area/Area_ApiarySite" />
+      <nodes>
+        <classShapeMoniker Id="4920807d-b9b4-460d-b1fd-2fc3d3bac98a" />
+        <classShapeMoniker Id="304fa6a6-4a8f-44af-8eb0-316af8d3adaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 5.17307657877604); (5.82291666666667 : 5.17307657877604 : JumpStart); (5.98958333333333 : 5.17307657877604 : JumpEnd); (6.875 : 5.17307657877604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DaviesApiariesDataContext/PrimaryResource/PrimaryResource_ApiarySite" />
+      <nodes>
+        <classShapeMoniker Id="2761a4ab-433b-4f2c-93ab-bef68da3fafd" />
+        <classShapeMoniker Id="304fa6a6-4a8f-44af-8eb0-316af8d3adaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 4.03125); (6.875 : 4.03125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DaviesApiariesDataContext/Contact/Contact_ApiarySite" />
+      <nodes>
+        <classShapeMoniker Id="a4c0659b-ca06-42e5-9009-5dde61138411" />
+        <classShapeMoniker Id="304fa6a6-4a8f-44af-8eb0-316af8d3adaa" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

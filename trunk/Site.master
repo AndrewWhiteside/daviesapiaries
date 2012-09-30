@@ -1,0 +1,35 @@
+﻿<%@ Master Language="VB" CodeFile="Site.master.vb" Inherits="Site" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Apiary Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="form1" runat="server">
+        <div id="header">
+            <span class="title">Apiary Site Management</span> <span class="breadcrumb"><span
+                class="breadcrumb">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                </asp:SiteMapPath>
+            </span></span>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="navigation">
+            <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+            </asp:TreeView>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="DaviesApiaries" Class="DaviesApiariesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DIDDYLAPTOP;Initial Catalog=DaviesApiaries;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DaviesApiariesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Activities" Member="Activities">
+    <Type Name="Activity">
+      <Column Name="ActivityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ActivityTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActivityDescription" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="ActivityDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActivityMap" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="Activity_ApiarySiteActivity" Member="ApiarySiteActivities" ThisKey="ActivityID" OtherKey="ActivityID" Type="ApiarySiteActivity" />
+      <Association Name="ActivityType_Activity" Member="ActivityType" ThisKey="ActivityTypeID" OtherKey="ActivityTypeID" Type="ActivityType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActivityType" Member="ActivityTypes">
+    <Type Name="ActivityType">
+      <Column Name="ActivityTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ActivityTypeDescription" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="ActivityType_Activity" Member="Activities" ThisKey="ActivityTypeID" OtherKey="ActivityTypeID" Type="Activity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ApiarySiteActivities" Member="ApiarySiteActivities">
+    <Type Name="ApiarySiteActivity">
+      <Column Name="ApiarySiteID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActivityID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Activity_ApiarySiteActivity" Member="Activity" ThisKey="ActivityID" OtherKey="ActivityID" Type="Activity" IsForeignKey="true" />
+      <Association Name="ApiarySite_ApiarySiteActivity" Member="ApiarySite" ThisKey="ApiarySiteID" OtherKey="ApiarySiteID" Type="ApiarySite" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Area" Member="Areas">
+    <Type Name="Area">
+      <Column Name="AreaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AreaDescription" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="Area_ApiarySite" Member="ApiarySites" ThisKey="AreaID" OtherKey="AreaID" Type="ApiarySite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrimaryResource" Member="PrimaryResources">
+    <Type Name="PrimaryResource">
+      <Column Name="PrimaryResourceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrimaryResourceDescription" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="PrimaryResource_ApiarySite" Member="ApiarySites" ThisKey="PrimaryResourceID" OtherKey="PrimaryResourceID" Type="ApiarySite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="ContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="District" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ContactName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UHF" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AdditionalInfo" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Association Name="Contact_ApiarySite" Member="ApiarySites" ThisKey="ContactID" OtherKey="ContactID" Type="ApiarySite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ApiarySite" Member="ApiarySites">
+    <Type Name="ApiarySite">
+      <Column Name="ApiarySiteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="GPSLatitude" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="GPSLongitude" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="CommonName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PrimaryResourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocationDescription" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AreaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DRA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Zone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="COGPlan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LandTenure" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ManagementPlan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CALMDistrict" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ContactID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Map" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Organic" Type="System.Boolean" CanBeNull="false" />
+      <Association Name="ApiarySite_ApiarySiteActivity" Member="ApiarySiteActivities" ThisKey="ApiarySiteID" OtherKey="ApiarySiteID" Type="ApiarySiteActivity" />
+      <Association Name="Area_ApiarySite" Member="Area" ThisKey="AreaID" OtherKey="AreaID" Type="Area" IsForeignKey="true" />
+      <Association Name="PrimaryResource_ApiarySite" Member="PrimaryResource" ThisKey="PrimaryResourceID" OtherKey="PrimaryResourceID" Type="PrimaryResource" IsForeignKey="true" />
+      <Association Name="Contact_ApiarySite" Member="Contact" ThisKey="ContactID" OtherKey="ContactID" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

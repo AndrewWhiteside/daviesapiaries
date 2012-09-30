@@ -1,0 +1,298 @@
+﻿
+/* Overall Page */
+
+body
+{
+    margin: 0;
+    padding-bottom: 2em;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: "Segoe UI" , Arial, sans-serif;
+}
+
+/* Header Section */
+
+#header
+{
+    border-top: 3px solid #000000;
+    border-bottom: 1px dotted #000000;
+    background-color: #FFCC00;
+    background-image: url(img/orangegradient.jpg);
+    height: 3em;
+}
+#header .title
+{
+    font: 190% Arial, Helvetica, Georgia, "Times New Roman" , Times, serif;
+    color: black;
+    background-color: transparent;
+    float: left;
+    margin-right: 2em;
+    margin-top: 0.3em;
+    margin-left: .8em;
+}
+#header .breadcrumb
+{
+    font: 90% Arial, Helvetica, Georgia, "Times New Roman" , Times, serif;
+    color: black;
+    background-color: transparent;
+    float: right;
+    margin-right: 2em;
+    margin-top: 0.8em;
+    font-weight: bold;
+}
+
+#header a:link
+{
+    color: #000000;
+}
+
+/* Navigation */
+
+#navigation
+{
+    width: 200px;
+    top: 5em;
+    left: 1em;
+    width: 13em;
+    position: absolute;
+    font-family: "Segoe UI" , Arial, sans-serif;
+    font-size: 90%;
+}
+#navigation ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#navigation li
+{
+    border-bottom: 1px solid #ED9F9F;
+}
+#navigation li a
+{
+    display: block;
+    padding: 5px 5px 5px 0.5em;
+    border-left: 12px solid #711515;
+    border-right: 1px solid #711515;
+    background-color: #FFCC00;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#navigation li a:hover
+{
+    background-color: #711515;
+    color: #FFFFFF;
+}
+#navigation ul ul
+{
+    margin-left: 12px;
+}
+#navigation ul ul li
+{
+    border-bottom: 1px solid #711515;
+    margin: 0;
+    background-color: #ED9F9F;
+    color: #711515;
+}
+#navigation ul ul a:link, #navigation ul ul a:visited
+{
+    background-color: #ED9F9F;
+    color: #711515;
+}
+#navigation ul ul a:hover
+{
+    background-color: #711515;
+    color: #FFFFFF;
+}
+
+/* Main Content */
+
+#content
+{
+    margin-top: 1em;
+    margin-left: 16em;
+    margin-right: 2em;
+}
+h1
+{
+    font: 150% Arial, Helvetica, Georgia, "Times New Roman" , Times, serif;
+}
+#content p
+{
+    font-size: 80%;
+    line-height: 1.6em;
+}
+
+#content ul
+{
+    font-size: 80%;
+    line-height: 1.6em;
+}
+
+
+/* Data Web Control Styles */
+
+.DataWebControlStyle
+{
+    font-size: 90%;
+}
+
+.HeaderStyle
+{
+    background-color: #900;
+    color: White;
+    font-weight: bold;
+}
+
+.AlternatingRowStyle
+{
+    background-color: #fcc;
+}
+
+.RowStyle
+{
+}
+
+.Warning
+{
+    color: Red;
+    font-style: italic;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.subhead
+{
+    display: inline-block;
+    width: 200px;
+    color: #003333;
+    font-weight: bold;
+    background-color: #fff3C6;
+}
+
+.LinkButton, .LinkButton a:link, .LinkButton a:visited
+{
+    color: #000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 14px;
+    margin-left: 0px;
+}
+
+.FormView
+{
+    display: block;
+    width: 400px;
+    line-height: 20px;
+    margin-left: 60px;
+    border: solid 1px #fff3C6;
+    background-color: #FFF;
+    padding: 5px;
+}
+
+.FormView .LinkButton, .FormView .LinkButton a:link, .FormView .LinkButton a:visited
+{
+    color: #000;
+    display: inline-block;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 18px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.FormView .subhead
+{
+    display: inline-block;
+    width: 130px;
+    color: #003333;
+    font-weight: bold;
+    background-color: #fff3C6;
+}
+
+a, a .visited
+{
+    font-family: "Segoe UI" , Arial, sans-serif;
+    color: #000;
+}
+
+/* Grids */
+
+.Grid
+{
+    font-size: 90%;
+    width: 100%;
+    border: solid 1px #ffd595;
+}
+
+.GridHeader
+{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    height: 40px;
+    background-color: #FFCC00;
+    background-image: url(img/gradient.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    text-decoration: none;
+}
+
+.GridHeader a:link, .GridHeader2 a:visited
+{
+    color: #2E2E2E;
+    text-decoration: none;
+}
+
+.GridRow
+{
+    background-color: #fff3C6;
+}
+.GridAltRow
+{
+    background-color: #ffffff;
+}
+.GridEditRow
+{
+    background-color: #ffcb7d;
+}
+.GridSelectedRow
+{
+    background-color: #ffba53;
+}
+.GridFooter
+{
+}
+.GridPager
+{
+    color: #2E2E2E;
+    background-color: #ff9900;
+    background-image: url(img/gradient.jpg);
+}
+
+table.table-form
+{
+    border: solid 1px #ccc;
+}
+.table-form td
+{
+    color: Black;
+    width: 400px;
+    line-height: 35px;
+}
+.table-form th
+{
+    width: 150px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #eee;
+    line-height: 35px;
+}
+
+.GridRow
+{
+    margin: 15px;
+    line-height: 30px;
+}
+

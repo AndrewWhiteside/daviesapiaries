@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Home"  description="">
+    <siteMapNode url="" title="Admin"  description="" >
+      <siteMapNode url="~/Admin/ManageActivityTypes.aspx" title="Manage Activity Types"  description="This section can be used to managed the Activity Types Drop down lists."/>
+      <siteMapNode url="~/Admin/ManageAreas.aspx" title="Manage Areas"  description="This section can be used to manage the Area drop down lists."/>
+      <siteMapNode url="~/Admin/ManagePrimaryResources.aspx" title="Manage Primary Resources"  description="This area can be used to manage the Primary Resources drop down lists."/>
+    </siteMapNode>
+    <siteMapNode url="" title="Main"  description="" >
+      <siteMapNode url="~/Main/Contacts/Contacts.aspx" title="Contacts"  description="This area can be used to view or manage the contacts."/>
+      <siteMapNode url="~/Main/ApiarySites/ApiarySites.aspx" title="Apiary Sites"  description="This area can be used to view or manage Apiary Sites."/>
+      <siteMapNode url="~/Main/Activities/Activities.aspx" title="Activities"  description="This area can be used to view or manage Activities."/>
+    </siteMapNode>
+    <siteMapNode url="" title="Reports"  description="" >
+      <siteMapNode url="~/Reports/SitePack.aspx" title="Apiary Site Report"  description="Print out a report pack."/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
