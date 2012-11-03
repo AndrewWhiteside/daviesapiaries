@@ -31,6 +31,22 @@ Partial Class Main_ApiarySites_ApiarySiteDetails
         Response.Redirect("ApiarySites.aspx", True)
     End Sub
 
+    Protected Sub fvApiarySite_ItemDeleting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewDeleteEventArgs) Handles fvApiarySite.ItemDeleting
+        'hacks - first delete the Activities
+        Dim dc As New DaviesApiariesDataContext
+        Dim asalist = From a In dc.ApiarySiteActivities _
+                      Where a.ApiarySiteID = fvApiarySite.SelectedValue.ToString _
+                      Select a
+
+        For Each asa As ApiarySiteActivity In asalist
+            dc.ApiarySiteActivities.DeleteOnSubmit(asa)
+        Next
+        dc.SubmitChanges()
+
+   
+
+    End Sub
+
     Protected Sub fvApiarySite_ItemInserted(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewInsertedEventArgs) Handles fvApiarySite.ItemInserted
         Response.Redirect("ApiarySites.aspx", True)
     End Sub

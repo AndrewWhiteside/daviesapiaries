@@ -27,7 +27,7 @@
         <elementListCompartment Id="a17786c1-ca89-4efc-b165-88d6559d8cbd" absoluteBounds="4.14, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.125 : 0.6875025); (5.71875 : 0.6875025); (5.71875 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.125 : 0.6875025); (5.71875 : 0.6875025); (5.71875 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DaviesApiariesDataContext/Activity/Activity_ApiarySiteActivity" />
       <nodes>
         <classShapeMoniker Id="ae39ec47-2306-433e-bd95-3bd0c9c05aae" />
