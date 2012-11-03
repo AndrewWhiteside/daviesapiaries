@@ -493,6 +493,8 @@
                     <td>
                         <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit"
                             Text="Edit" />
+                        <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete"
+                            Text="Delete" OnClientClick='return confirm("Are you sure you want to delete this Apiary Site?");' />
                     </td>
                 </tr>
             </table>
@@ -531,7 +533,7 @@
         Select="new (PrimaryResourceID, PrimaryResourceDescription)" TableName="PrimaryResources">
     </asp:LinqDataSource>
     <asp:LinqDataSource ID="ApiarySiteDataSource" runat="server" ContextTypeName="DaviesApiariesDataContext"
-        EnableInsert="True" EnableUpdate="True" TableName="ApiarySites" Where="ApiarySiteID == @ApiarySiteID">
+        EnableInsert="True" EnableUpdate="True" EnableDelete="True" TableName="ApiarySites" Where="ApiarySiteID == @ApiarySiteID">
         <WhereParameters>
             <asp:QueryStringParameter Name="ApiarySiteID" QueryStringField="ApiarySiteID" Type="Int32" />
         </WhereParameters>

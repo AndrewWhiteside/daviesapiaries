@@ -27,9 +27,12 @@ Partial Class Main_ApiarySites_ApiarySiteDetails
         End If
     End Sub
 
+    Protected Sub fvApiarySite_ItemDeleted(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewDeletedEventArgs) Handles fvApiarySite.ItemDeleted
+        Response.Redirect("ApiarySites.aspx", True)
+    End Sub
 
     Protected Sub fvApiarySite_ItemInserted(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewInsertedEventArgs) Handles fvApiarySite.ItemInserted
-        Response.Redirect("ApiarySites.aspx", False)
+        Response.Redirect("ApiarySites.aspx", True)
     End Sub
 
     Protected Function GetPDFPath() As String
